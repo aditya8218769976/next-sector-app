@@ -63,7 +63,7 @@ const Home: React.FC = () => {
       <h2 className="mt-4">Please enter your name and pick the Sectors you are currently involved in.</h2>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Name:</label>
+        <label className="block text-sm font-medium text-black-700"><strong>Name:</strong></label>
         <input
           type="text"
           value={name}
@@ -73,8 +73,8 @@ const Home: React.FC = () => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">
-          Sectors:
+        <label className="block text-sm font-medium text-black-700">
+          <strong>Sectors:</strong>
         </label>
         <select
           multiple
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
           className="mt-1 p-2 block w-full rounded-md border border-gray-300 bg-white text-black"
         >
           {sectors.map((sector) => (
-            <option key={sector.value} value={sector.value}>
+            <option className="hover:bg-gray-400 cursor-pointer" key={sector.value} value={sector.value}>
               {sector.label}
             </option>
           ))}
@@ -96,14 +96,14 @@ const Home: React.FC = () => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-black-700">
           <input
             type="checkbox"
             checked={agree}
             onChange={() => setAgree(!agree)}
             className="mr-2"
           />
-          Agree to terms
+          <strong>Agree to terms!</strong>
         </label>
       </div>
 
